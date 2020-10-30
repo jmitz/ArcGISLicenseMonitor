@@ -1,11 +1,11 @@
-#ArcGISLicenseMonitor
+# ArcGISLicenseMonitor
 ====================
 
 Aids in monitoring licenses managed by ESRI's ArcGIS License Manager. 
 Python script checks license usage using a local ArcGIS License Manager and connects to external License managers by IP address. 
 Data are stored in SQLServer database and can be retrieved with an Excel spreadsheet
 
-##Database Setup
+## Database Setup
 
 Run the createInstance.sql to build the database instance to hold the tables, views and stored procedures.
 
@@ -38,15 +38,15 @@ Give the user account that will be access the data select rights on the views.
 1. vwUserFirstLastConnection
 2. vwUserSession
 
-##Monitoring Machine Setup
+## Monitoring Machine Setup
 
-###Requirements
+### Requirements
 
 * Local installation of ArcGIS License Manager
 * Python
 * Python ODBC Library ([PYODBC](http://code.google.com/p/pyodbc/))
 
-###Monitoring Command
+### Monitoring Command
 
 The command for the monitoring task is `LicenseMonitor' followed by the IP addresses of 
 the ArcGIS License managers.
@@ -63,16 +63,16 @@ updated when LicenseMonitor is run. So if the task is run every 10 minutes short
 I have not noticed any slowdown on a machine running the process every 5 minutes. The process could easily be
 run on the license manager itself.
 
-##Reporting
+## Reporting
 
-###Requirements
+### Requirements
 
 * Microsoft Excel (2010)
 
 The ArcGISLicenseTracking.xlsx spreadsheet is used to pull the data from the database and put it in a format that 
 is easy to use.
 
-###Setup
+### Setup
 
 You will need to set up data connections to the database to allow the spreadsheet to access the stored session
 information.
